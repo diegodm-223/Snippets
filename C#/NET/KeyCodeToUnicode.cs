@@ -1,3 +1,10 @@
+/*
+*   Found at https://stackoverflow.com/questions/318777/c-sharp-how-to-translate-virtual-keycode-to-char 
+*   2021/04/15
+*   Author: Ivan Petrov (https://stackoverflow.com/users/925308/ivan-petrov)
+*/
+
+
 /// <summary>
 ///     Get the character or characters that the key will print after pressed. 
 /// </summary>
