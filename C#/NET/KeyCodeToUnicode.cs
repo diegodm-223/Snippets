@@ -11,7 +11,8 @@
 *   private void macTextBox_KeyDown(object sender, KeyEventArgs e)
 *   {   
 *       Regex rxHex = new Regex(@"^[a-fA-F0-9]$");
-*       if (KeyCodeToUnicode(e.KeyCode) != "" && !rxHex.IsMatch(s))
+*       string character = KeyCodeToUnicode(e.KeyCode);
+*       if (character != "" && !rxHex.IsMatch(character))
 *       {
 *          e.SuppressKeyPress = true;
 *       }
