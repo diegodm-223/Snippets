@@ -2,8 +2,23 @@
 *   Found at https://stackoverflow.com/questions/318777/c-sharp-how-to-translate-virtual-keycode-to-char 
 *   2021/04/15
 *   Author: Ivan Petrov (https://stackoverflow.com/users/925308/ivan-petrov)
+*
+*   
+*   This method is useful for controlling the behavior of the application before entering a key.
+*   For example, it can be added to the KeyDown event of a TextBox or MaskedTextBox to accept only 
+*   hexadecimal characters.
+*
+*   private void macTextBox_KeyDown(object sender, KeyEventArgs e)
+*   {   
+*       Regex rxHex = new Regex(@"^[a-fA-F0-9]$");
+*       if (KeyCodeToUnicode(e.KeyCode) != "" && !rxHex.IsMatch(s))
+*       {
+*          e.SuppressKeyPress = true;
+*       }
+*   }
+*
+*   This way nothing will be printed unless is a hexadecimal character. 
 */
-
 
 /// <summary>
 ///     Get the character or characters that the key will print after pressed. 
